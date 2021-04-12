@@ -21,9 +21,9 @@ def corrplt(x, y):
 def crosscorr(a, v):
     corr = np.correlate(a, v, "full")
 
-    n1 = (len(v) - 1) * -1
+    n1 = len(v) - 1
     n2 = len(a) - 1
-    n = np.linspace(n1, n2, num=len(corr))
+    n = np.linspace(-n1, n2, num=len(corr))
 
     print(corr)
 

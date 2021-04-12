@@ -20,7 +20,7 @@ def fourierplt(x, y, F):
 
 
 def fourier(F, N, T, noise=False):
-    t = np.linspace(0, N-1, num=N) / N
+    t = np.linspace(0, N, num=N, endpoint=False) / N
     t = t*T
 
     f = np.sin(2 * np.pi * F * t)
@@ -30,7 +30,7 @@ def fourier(F, N, T, noise=False):
     N = int(N/2)
     p = np.absolute(np.fft.fft(f)) / N
     p = p[0:N] ** 2
-    freq = np.linspace(0, N-1, num=N) / T
+    freq = np.linspace(0, N, num=N, endpoint=False) / T
 
     return freq, p
 
@@ -41,7 +41,7 @@ def main():
     T = 3.4
 
     for F in Frequency:
-        freq, p = fourier(F, N, T, False)
+        freq, p = fourier(F, N, T, True)
         fourierplt(freq, p, F)
 
     plt.show()

@@ -21,7 +21,7 @@ def convplt(x, y):
 def convolution(a, v):
     con = np.convolve(a, v)
 
-    n = np.linspace(0, len(con) - 1, num=len(con))
+    n = np.linspace(0, len(con), num=len(con), endpoint=False)
 
     print("Output sequence")
     print(con)
