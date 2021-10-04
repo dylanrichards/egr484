@@ -6,8 +6,8 @@ Stem Plot
 
 """
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def corrplt(x, y):
@@ -43,5 +43,5 @@ def main():
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

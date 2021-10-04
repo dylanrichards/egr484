@@ -7,27 +7,26 @@ Then take the square of the absolute value
 
 """
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def fourierplt(x, y, F):
     fig, ax = plt.subplots()
     ax.semilogy(x, y)
-    ax.set(xlabel="Frequency (Hz)", ylabel="Power",
-           title="Fourier Freq = {}".format(F))
+    ax.set(xlabel="Frequency (Hz)", ylabel="Power", title="Fourier Freq = {}".format(F))
     ax.set_xlim([0, 20])
 
 
 def fourier(F, N, T, noise=False):
     t = np.linspace(0, N, num=N, endpoint=False) / N
-    t = t*T
+    t = t * T
 
     f = np.sin(2 * np.pi * F * t)
     if noise:
         f = f + 2 * np.random.randn(N)
 
-    N = int(N/2)
+    N = int(N / 2)
     p = np.absolute(np.fft.fft(f)) / N
     p = p[0:N] ** 2
     freq = np.linspace(0, N, num=N, endpoint=False) / T
@@ -47,5 +46,5 @@ def main():
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

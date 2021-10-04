@@ -3,11 +3,11 @@ Convolution
     https://numpy.org/doc/stable/reference/generated/numpy.convolve.html
 Stem Plot
     https://matplotlib.org/stable/gallery/lines_bars_and_markers/stem_plot.html
-   
+
 """
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def convplt(x, y):
@@ -42,5 +42,5 @@ def main():
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

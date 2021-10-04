@@ -3,15 +3,14 @@ Fourier Series Odd Function
 
 """
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def seriesplt(x, y, N):
     fig, ax = plt.subplots()
     ax.plot(x, y)
-    ax.set(xlabel="Time (t)", ylabel="f(t)",
-           title="Fourier Series N = {}".format(N))
+    ax.set(xlabel="Time (t)", ylabel="f(t)", title="Fourier Series N = {}".format(N))
     fig.savefig("HW3_N{}".format(N))
 
 
@@ -38,5 +37,5 @@ def main():
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
